@@ -1,0 +1,9 @@
+Things to use when making the app:
+
+	AutoCompleteTextView:
+		Allows you to assosciate a long list of things for the autocomplete text view (like usernames or tabs or titles of product) and then suggests things as you type based on the list of things assosciated with the UIAutoCompleteTextView.
+
+	OnLongClickListener vs OnClickListener!
+
+	GridView with blow up images
+		3rd UI video in coursera.

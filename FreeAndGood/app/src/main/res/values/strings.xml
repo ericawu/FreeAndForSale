@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Free and For Sale</string>
+
+    <string name="title_section1">Feed</string>
+    <string name="title_section2">My Posts</string>
+    <string name="title_section3">Watchlist</string>
+    <string name="title_section4">Categories</string>
+    <string name="title_section5">Profile</string>
+    <string name="title_section6">Sign Out</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="newpost">New Post</string>
+    <string name="search">Search</string>
+    <string name="login">User Login</string>
+    <string name="title_activity_full_post">Full Post</string>
+
+    <string name="title_activity_category_feed">Category</string>
+</resources>

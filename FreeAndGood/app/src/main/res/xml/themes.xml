@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<!--<style name="Theme.mytheme" parent="android:Theme.AppCompat.Light">-->
+    <!--&lt;!&ndash;<item name="android:"&ndash;&gt;-->
+<!--</style>-->
+</PreferenceScreen>

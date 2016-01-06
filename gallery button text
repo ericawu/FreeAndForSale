@@ -1,0 +1,64 @@
+	Button buttonChoosePhoto;
+    ImageView imageChosen;
+    private static final int CAM_REQUEST = 1313;
+    public static final int RESULT_GALLERY = 0;
+
+in onCreate:
+		// Set up Photo Gallery button
+        buttonChoosePhoto = (Button) findViewById(R.id.photo_button);
+        imageChosen = (ImageView) findViewById(R.id.imageView1);
+        buttonChoosePhoto.setOnClickListener(new buttonChoosePhotoClicker());
+
+
+outside that in the main class
+    @Override
+    //maybe try making requestCode RESULT_GALLERY and the intent galleryIntent
+    // or just one or the other....
+    //use Coursera acivity class part 2 a around 8:00 as a reference
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == CAM_REQUEST && resultCode == RESULT_OK)
+        {
+            // display chosen picture from gallery in ImageView
+            Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
+                    imageChosen.setImageBitmap(thumbnail);
+        }
+
+    }
+
+    class buttonChoosePhotoClicker implements Button.OnClickListener
+    {
+        @Override
+        public void onClick(View view)
+        {
+            Intent galleryIntent = new Intent(
+                    Intent.ACTION_PICK,
+                    android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+            startActivityForResult(galleryIntent, RESULT_GALLERY );
+        }
+    }
+
+
+in the xml
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/photo_button" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/photo_button"
+            android:id="@+id/photo_button"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            />

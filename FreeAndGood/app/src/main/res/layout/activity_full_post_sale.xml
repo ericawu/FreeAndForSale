@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/full_post_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp">
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/progressBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:progress="10"/>
+        <EditText
+            android:id="@+id/addMessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/price"
+            android:layout_toStartOf="@+id/price"
+            android:hint="Add a Message:"/>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/button_buy"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:text="Buy at Price?"
+            android:textSize="15sp"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <ViewFlipper
+                android:id="@+id/fullPostViewFlipper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000000"
+                android:padding="5dp">
+            </ViewFlipper>
+
+            <TextView
+                android:id="@+id/fullPostDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:textSize="17dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
